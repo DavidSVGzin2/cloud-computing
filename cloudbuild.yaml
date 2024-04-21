@@ -1,3 +1,25 @@
 steps: 
+
+- name: "Test HTML and CSS"
+    id: "test"
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
+        # Run any tests for the HTML and CSS (if applicable)
+        # Example: Use a static site analyzer like HTMLProofer or CSSLint
+        echo "Testing HTML and CSS..."
+
+  # Step 2: Build
+  - name: "Build Web Application"
+    id: "build"
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
+        # Build the static web application (if needed)
+        # Example: Minify CSS, optimize images, etc.
+        echo "Building web application..."
+
 - name: 'gcr.io/intricate-web-420903/firebase'
   args: ['deploy']
